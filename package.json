@@ -14,7 +14,8 @@
     "build:prod": "ng build --configuration production",
     "start:prod": "http-server ./dist -a localhost -p 4200",
     "build-and-start:prod": "run-s build:prod start:prod",
-    "e2e": "start-server-and-test build-and-start:prod http://localhost:4200 cypress:run"
+    "build-and-deploy:prod": "run-s build:prod start:prod",
+    "e2e": "start-server-and-test build-and-deploy:prod http://localhost:4200 cypress:run"
   },
   "private": true,
   "dependencies": {
@@ -60,7 +61,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "start-server-and-test": "^1.15.4",
+    "start-server-and-test": "^1.9.1",
     "ts-node": "~3.2.0",
     "typescript": "~5.2.2"
   }
